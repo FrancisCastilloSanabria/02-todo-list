@@ -11,23 +11,19 @@ export class TodoListComponent {
 
   tasks: any[] = [
     {
-      title: 'Crear la lista de tareas',
+      title: 'Terminar el Figma',
       completed: true,
     },
     {
-      title: 'Realizar la estructura HTML',
+      title: 'Finalizar app con Flutter',
+      completed: false,
+    },
+    {
+      title: 'Terminar el aplicativo web jee-boostrap',
       completed: true,
     },
     {
-      title: 'Agregar estilos y validaciones',
-      completed: false,
-    },
-    {
-      title: 'Elaborar el flujo y animaciones',
-      completed: false,
-    },
-    {
-      title: 'Desplegar el proyecto en la web',
+      title: 'Que abuso',
       completed: false,
     },
   ];
@@ -44,8 +40,8 @@ export class TodoListComponent {
     const index = this.tasks.indexOf(task);
     const updateTask = {
       title,
-      completed: task.completed
-    }
+      completed: task.completed,
+    };
     this.tasks[index] = { ...task, ...updateTask };
   }
 
@@ -65,5 +61,15 @@ export class TodoListComponent {
   stopEdit(task: any, title: string): void {
     this.editableId = null;
     this.updateTask(task, title);
+  }
+
+  // Agrega una propiedad para el texto de búsqueda
+  searchText = '';
+
+  // Crea una función para filtrar las tareas basadas en el texto de búsqueda
+  filterTasks(): any[] {
+    return this.tasks.filter((task) =>
+      task.title.toLowerCase().includes(this.searchText.toLowerCase())
+    );
   }
 }

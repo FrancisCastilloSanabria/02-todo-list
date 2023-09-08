@@ -7,6 +7,12 @@
         </p>
         <p class="text-muted pb-2">04/01/2020 • AS221 - TEI</p>
 
+        <!-- Input buscar Tarea -->
+        <div class="input-group mb-4">
+            <input type="text" class="form-control" placeholder="Buscar tarea" aria-label="Buscar tarea"
+                aria-describedby="btn-search-task" [(ngModel)]="searchText">
+        </div>
+
         <!-- Input text -->
         <div class="input-group mb-4">
             <input type="text" class="form-control" placeholder="Agregar tarea" aria-label="Agregar tarea"
@@ -28,8 +34,8 @@
         </ul>
 
         <!-- Task list -->
-        <ul class="list-group mb-0" *ngIf="tasks && tasks.length > 0; else notDataTpl">
-            <li *ngFor="let task of tasks; let i = index"
+        <ul class="list-group mb-0" *ngIf="filterTasks().length > 0; else notDataTpl">
+            <li *ngFor="let task of filterTasks(); let i = index"
                 class="list-group-item d-flex justify-content-between align-items-center border-0 mb-2 rounded"
                 style="background-color: #f4f6f7;">
                 <div>
