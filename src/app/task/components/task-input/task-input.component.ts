@@ -16,5 +16,6 @@ export class TaskInputComponent {
       completed: false,
     }
     this.createTask.emit(task);
+    this.newTask = ''; // Limpia el campo de entrada después de agregar la tarea.
   }
 }

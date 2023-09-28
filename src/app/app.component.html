@@ -1,4 +1,36 @@
-<section class="vh-100 bg-dark">
+<style>
+  body {
+    position: relative;
+    margin: 0;
+  }
+
+  .sect {
+    width: 100%;
+    min-height: 500px;
+  }
+
+  #sect1 {
+    background-color: #3333337d;
+    color: #fff;
+    position: fixed;
+    min-width: 105%;
+    min-height: 100%;
+  }
+
+  video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
+  }
+</style>
+
+<video src="https://carontestudio.com/img/f4.mp4" autoplay="true" muted="true" loop="true"
+  poster="https://as1.ftcdn.net/v2/jpg/00/48/77/56/1000_F_48775606_SMX5M40Ut8le3H7Ah7JZSR8hDaGWEJ5W.jpg"></video>
+<section id="sect1" class="sect">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center py-5">
       <div class="col col-lg-8 col-xl-7">
@@ -9,3 +41,16 @@
     </div>
   </div>
 </section>
+
+
+<!-- <section class="vh-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center py-5">
+        <div class="col col-lg-8 col-xl-7"> -->
+<!-- Task card app init -->
+<!-- <app-task-card></app-task-card> -->
+<!-- Task card app end -->
+<!-- </div>
+      </div>
+    </div>
+  </section> -->
